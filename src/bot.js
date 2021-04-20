@@ -36,8 +36,8 @@ client.on('message', async (message) => {
                     .setColor('#FF4C8B')
                     .setTitle("Top Tokens in Your Wallet By Amount ")
                     .setFooter("- Made with ❤️ using Covalent APIs")
-                    // .setThumbnail("https://s4.gifyu.com/images/flip_1.gif")
-                    .setThumbnail("https://i.ibb.co/yd4hYrz/covalent.png")
+                    .setThumbnail("https://s4.gifyu.com/images/flip_1.gif")
+                    // .setThumbnail("https://i.ibb.co/yd4hYrz/covalent.png")
                     // .setThumbnail("https://i.ibb.co/VL2BLVm/siywpav2xzmfukum8jtc.png")
                     .setImage("https://i.ibb.co/P6NqFzd/Covalent-One-unified-API-One-billion-possibilities-22-43-08.png")
                     .setURL(`https://etherscan.io/address/${args[0]}`);
@@ -483,7 +483,8 @@ client.on('message', async (message) => {
                 .setColor('#00D8D5')
                 .setFooter("-------------------------------------------------------------------------------------------------------------" +
                     " \n - Made with ❤️ using Covalent APIs | Contact KingSuper For Any Issues or Help")
-                .setThumbnail("https://s4.gifyu.com/images/flip_1.gif")
+                // .setThumbnail("https://s4.gifyu.com/images/flip_1.gif")
+                .setThumbnail("https://i.ibb.co/yd4hYrz/covalent.png")
 
                 .addField("\u200B", "\u200B")
 
