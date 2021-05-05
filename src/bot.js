@@ -18,6 +18,11 @@ client.on('ready', () => {
 // https://api.covalenthq.com/v1/1/address/0xE613Db0bfCd8FF9b45D7F043E1a6F0ca8677f97a/balances_v2/?nft=false&no-nft-fetch=true
 client.on('message', async (message) => {
     if (message.author.bot) return;
+    if (!message.guild) return;
+
+    //uncomment this line for bot to work only in a specific channel
+    // if (message.channel.id !== process.env.DISCORD_CHANNEL_ID) return;
+
     if (message.content.startsWith(PREFIX)) {
         const [CMD_NAME, ...args] = message.content
             .trim()
@@ -528,10 +533,14 @@ client.on('message', async (message) => {
 
             message.channel.send(embed)
         } else {
-            message.channel.send('Sorry ! But I don\'t know, what to say !')
+            return ;
+            // message.channel.send('Sorry ! But I don\'t know, what to say !')
         }
     }
 });
 
 
 client.login(process.env.DISCORDJS_BOT_TOKEN);
+process.on('unhandledRejection', error => {
+    console.error('Unhandled promise rejection:', error);
+});
