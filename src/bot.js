@@ -189,7 +189,7 @@ client.on('message', async (message) => {
 
             if (args.length === 1) {
                 try {
-                    const {data} = await fetch(`https://api.covalenthq.com/v1/1/tokens/${args[0]}/token_holders/?page-size=1`).then(response => response.json());
+                    const {data} = await fetch(`https://api.covalenthq.com/v1/1/tokens/${args[0]}/token_holders/?page-size=1&key=ckey_c9f6b347ceee45a7afec8cbc264:`).then(response => response.json());
                     console.log(data)
                     if (data.items.length <= 0) {
                         throw "Wrong Ticker";
@@ -231,7 +231,7 @@ client.on('message', async (message) => {
                 }
             } else if (args.length === 2) {
                 try {
-                    const {data} = await fetch(`https://api.covalenthq.com/v1/1/tokens/${args[0]}/token_holders/?block-height=${args[1]}&page-size=1`).then(response => response.json());
+                    const {data} = await fetch(`https://api.covalenthq.com/v1/1/tokens/${args[0]}/token_holders/?block-height=${args[1]}&page-size=1&key=ckey_c9f6b347ceee45a7afec8cbc264:`).then(response => response.json());
                     console.log(data)
                     if (data.items.length <= 0) {
                         throw "Wrong Ticker";
@@ -387,9 +387,9 @@ client.on('message', async (message) => {
                 return message.channel.send("Invalid number of Arguments, Use `!help` to check for the correct syntax");
 
             } else if (args.length === 2) {
-                url = `https://api.covalenthq.com/v1/1/tokens/${args[0]}/token_holders_changes/?starting-block=${args[1]}&page-size=10000`
+                url = `https://api.covalenthq.com/v1/1/tokens/${args[0]}/token_holders_changes/?starting-block=${args[1]}&page-size=10000&key=ckey_c9f6b347ceee45a7afec8cbc264:`
             } else if (args.length === 3) {
-                url = `https://api.covalenthq.com/v1/1/tokens/${args[0]}/token_holders_changes/?starting-block=${args[1]}&ending-block=${args[2]}&page-size=10000`
+                url = `https://api.covalenthq.com/v1/1/tokens/${args[0]}/token_holders_changes/?starting-block=${args[1]}&ending-block=${args[2]}&page-size=10000&key=ckey_c9f6b347ceee45a7afec8cbc264:`
             } else {
                 return message.channel.send("Invalid number of Arguments, Use `!help` to check for the correct syntax");
             }
@@ -415,7 +415,7 @@ client.on('message', async (message) => {
                     // .setColor('#FF4C8B')
                     .setTitle(`Changes in Token Holders`)
                     .setFooter("- Made with ❤️ using Covalent APIs")
-                    .setDescription("```This shows the changes in the token holders between two block heights```")
+                    .setDescription(`*This shows the changes in the token holders between block heights for ${args[0]}*`)
                     .setThumbnail("https://s4.gifyu.com/images/flip_1.gif")
                 let sold = 0;
                 let bought = 0;
