@@ -1,8 +1,8 @@
-# Instructions To Add the Bot In Your Server
+# Covalent Discord Bot
 
 To use this code, follow the instructions:
 
-**Local Setup**
+## Local Setup
 
 1) Install all dependencies:
 
@@ -16,7 +16,7 @@ To use this code, follow the instructions:
 3) Run `npm run start` or `npm run dev` in the project directory
 
 
-**Production**
+## Production
 
 We can either use some process manager or just run the process in screen
 
@@ -25,7 +25,7 @@ We can either use some process manager or just run the process in screen
 3) Type `screen` to open a new screen
 4) Do All Steps from **Local Setup** above.
 
-### How to get your bot token?
+## How to get your bot token?
 
 1. In your browser, navigate to the [Discord Developer Portal](https://discord.com/developers/applications). Click
    the 'New Application' button. Discord will prompt you to enter the name of your application and a description of it.
